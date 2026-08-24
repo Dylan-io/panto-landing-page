@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panto — Furniture</title>
+
+  <!-- Google Fonts : Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Tailwind CSS + nos variables (via src/main.js qui importe src/style.css) -->
+  <script type="module" src="/src/main.js"></script>
+</head>
+
+<body class="bg-white text-dark font-body antialiased overflow-x-hidden">
+
+  <!-- ================================================================ -->
+  <!-- SECTION 1 : HERO                                                 -->
+  <!-- ================================================================ -->
+
+  <div
+    class="relative w-full min-h-[750px] sm:min-h-[850px] md:min-h-[920px] lg:min-h-[1020px] bg-cover bg-center bg-no-repeat overflow-hidden"
+    style="background-image: url('/images/Rectangle 1441.png');"
+  >
+    <!-- Overlay sombre doux pour lisibilité -->
+    <div class="absolute inset-0 bg-black/40"></div>
+
+    <!-- Dégradé blanc en bas pour transitionner proprement vers la section suivante -->
+    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white via-white/60 to-transparent z-10 pointer-events-none"></div>
+
+
+    <!-- ============================================================== -->
+    <!-- NAVBAR                                                         -->
+    <!-- ============================================================== -->
+    <header class="relative z-30 w-full pt-8 pb-4">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex items-center justify-between">
+
+          <!-- LOGO -->
+          <a href="#" class="text-white text-2xl sm:text-3xl font-bold tracking-wide hover:text-primary transition-colors">
+            Panto
+          </a>
+
+          <!-- NAVIGATION DESKTOP -->
+          <nav class="hidden md:flex items-center gap-8 lg:gap-10">
+
+            <div class="flex items-center gap-1.5 cursor-pointer">
+              <a href="#" class="text-white text-base font-normal hover:text-primary transition-colors">
+                Furniture
+              </a>
+              <img src="/images/Vector (2).png" alt="" class="w-2.5 h-2.5 opacity-80" />
+            </div>
+
+            <a href="#" class="text-white text-base font-normal hover:text-primary transition-colors">
+              Shop
+            </a>
+
+            <a href="#" class="text-white text-base font-normal hover:text-primary transition-colors">
+              About Us
+            </a>
+
+            <a href="#" class="text-white text-base font-normal hover:text-primary transition-colors">
+              Contact
+            </a>
+
+          </nav>
+
+          <!-- DROITE : PANIER + HAMBURGER -->
+          <div class="flex items-center gap-4">
+
+            <!-- Panier -->
+            <a href="#" class="relative flex items-center justify-center cursor-pointer" aria-label="Panier">
+              <img src="/images/Bag.png" alt="Panier" class="w-6 h-6 object-contain" />
+              <span class="absolute -top-2 -right-2 bg-primary text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center shadow">
+                0
+              </span>
+            </a>
+
+            <!-- Bouton Hamburger mobile -->
+            <button id="btn-hamburger" type="button" class="md:hidden flex flex-col gap-1.5 cursor-pointer" aria-label="Menu">
+              <span class="block w-6 h-0.5 bg-white rounded-full"></span>
+              <span class="block w-6 h-0.5 bg-white rounded-full"></span>
+              <span class="block w-6 h-0.5 bg-white rounded-full"></span>
+            </button>
+
+          </div>
+
+        </div>
+
+        <!-- MENU MOBILE -->
+        <nav id="menu-mobile" class="hidden mt-4 pt-4 pb-2 border-t border-white/20 flex flex-col gap-3">
+          <a href="#" class="text-white text-base hover:text-primary transition-colors">Furniture</a>
+          <a href="#" class="text-white text-base hover:text-primary transition-colors">Shop</a>
+          <a href="#" class="text-white text-base hover:text-primary transition-colors">About Us</a>
+          <a href="#" class="text-white text-base hover:text-primary transition-colors">Contact</a>
+        </nav>
+
+      </div>
+    </header>
+
+
+    <!-- ============================================================== -->
+    <!-- HERO TITRE & RECHERCHE                                         -->
+    <!-- ============================================================== -->
+    <div class="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 text-center pt-8 sm:pt-12 md:pt-16 pb-20">
+
+      <h1 class="text-white font-bold leading-[1.15] text-3xl sm:text-4xl md:text-5xl lg:text-[62px] tracking-tight">
+        Make Your Interior More <br />
+        Minimalistic &amp; Modern
+      </h1>
+
+      <p class="text-white/80 font-normal text-sm sm:text-base md:text-lg mt-4 sm:mt-5 max-w-xl mx-auto leading-relaxed">
+        Turn your room with panto into a lot more minimalist and modern with ease and speed
+      </p>
+
+      <!-- Champ de recherche -->
+      <div class="mt-8 sm:mt-10 flex justify-center">
+        <form class="flex items-center gap-3 bg-white/20 backdrop-blur-md border border-white/30 rounded-full pl-5 pr-2 py-2 w-full max-w-xs sm:max-w-sm shadow-xl">
+          <input
+            type="text"
+            placeholder="Search furniture"
+            class="bg-transparent text-white placeholder-white/70 text-sm outline-none flex-1 font-normal"
+          />
+          <button
+            type="submit"
+            class="bg-primary hover:bg-primary-medium rounded-full p-2.5 flex-shrink-0 transition-transform active:scale-95 cursor-pointer shadow-md"
+            aria-label="Rechercher"
+          >
+            <img src="/images/Frame 48095395.png" alt="Search" class="w-4 h-4 object-contain" />
+          </button>
+        </form>
+      </div>
+
+    </div>
+
+
+    <!-- ============================================================== -->
+    <!-- HOTSPOTS / POINTS INTERACTIFS SUR LES MEUBLES                  -->
+    <!-- ============================================================== -->
+
+    <!-- Point 1 : Sur le vase à fleurs sur la table en bois à gauche -->
+    <div class="absolute left-[7.5%] top-[64%] z-20 hidden md:flex items-center justify-center">
+      <div class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm border border-white/40 flex items-center justify-center shadow-lg cursor-pointer hover:scale-110 transition-transform">
+        <span class="w-3 h-3 rounded-full bg-white shadow-sm"></span>
+      </div>
+    </div>
+
+    <!-- Point 2 : Sur le canapé avec la bulle de 3 couleurs au-dessus -->
+    <div class="absolute left-[20.5%] top-[50%] z-20 hidden md:flex flex-col items-center gap-2">
+      
+      <!-- Popover de couleurs -->
+      <div class="relative bg-dark/60 backdrop-blur-md border border-white/30 px-3 py-1.5 rounded-full flex items-center gap-2 shadow-2xl">
+        <!-- Pastille Orange (Sélectionnée) -->
+        <div class="w-5 h-5 rounded-full bg-primary flex items-center justify-center shadow cursor-pointer hover:scale-110 transition-transform">
+          <img src="/images/bi_check.png" alt="selected" class="w-2.5 h-2.5 object-contain" />
+        </div>
+        <!-- Pastille Turquoise -->
+        <div class="w-5 h-5 rounded-full overflow-hidden cursor-pointer hover:scale-110 transition-transform flex items-center justify-center">
+          <img src="/images/Ellipse 212.png" alt="teal" class="w-full h-full object-cover" />
+        </div>
+        <!-- Pastille Grise -->
+        <div class="w-5 h-5 rounded-full overflow-hidden cursor-pointer hover:scale-110 transition-transform flex items-center justify-center">
+          <img src="/images/Ellipse 213.png" alt="gray" class="w-full h-full object-cover" />
+        </div>
+
+        <!-- Petite pointe du popover -->
+        <div class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-dark/60 rotate-45 border-r border-b border-white/30"></div>
+      </div>
+
+      <!-- Point rond blanc avec halo -->
+      <div class="w-10 h-10 rounded-full bg-white/25 backdrop-blur-md border border-white/50 flex items-center justify-center shadow-2xl cursor-pointer hover:scale-110 transition-transform">
+        <span class="w-3.5 h-3.5 rounded-full bg-white shadow"></span>
+      </div>
+
+    </div>
+
+    <!-- Point 3 : Sur la sculpture bleue sur la table basse centrale -->
+    <div class="absolute left-[55.5%] top-[68%] z-20 hidden md:flex items-center justify-center">
+      <div class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm border border-white/40 flex items-center justify-center shadow-lg cursor-pointer hover:scale-110 transition-transform">
+        <span class="w-3 h-3 rounded-full bg-white shadow-sm"></span>
+      </div>
+    </div>
+
+    <!-- Point 4 : Sur le pot de la plante verte à droite -->
+    <div class="absolute right-[4%] top-[72%] z-20 hidden md:flex items-center justify-center">
+      <div class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm border border-white/40 flex items-center justify-center shadow-lg cursor-pointer hover:scale-110 transition-transform">
+        <span class="w-3 h-3 rounded-full bg-white shadow-sm"></span>
+      </div>
+    </div>
+
+  </div>
+  <!-- Fin de la section Hero -->
+
+
+  <!-- ================================================================ -->
+  <!-- SECTION 2 : WHY CHOOSING US                                      -->
+  <!-- ================================================================ -->
+
+  <section class="py-16 sm:py-20 lg:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 items-start">
+
+        <!-- 1. Titre -->
+        <div class="sm:col-span-2 lg:col-span-1">
+          <h2 class="text-dark text-3xl sm:text-4xl font-bold leading-tight">
+            Why <br class="hidden lg:block" />
+            Choosing Us
+          </h2>
+        </div>
+
+        <!-- 2. Luxury facilities -->
+        <div class="flex flex-col justify-between h-full">
+          <div>
+            <h3 class="text-dark text-xl sm:text-2xl font-bold mb-3">
+              Luxury facilities
+            </h3>
+            <p class="text-gray text-sm sm:text-base leading-relaxed">
+              The advantage of hiring a workspace with us is that gives you comfortable service and all-around facilities.
+            </p>
+          </div>
+          <a href="#"
+            class="inline-flex items-center gap-2 text-primary text-sm font-medium mt-4 group hover:gap-3 transition-all">
+            <span>More Info</span>
+            <img src="/images/Vector.png" alt="" class="w-4 h-auto group-hover:translate-x-1 transition-transform" />
+          </a>
+        </div>
+
+        <!-- 3. Affordable Price -->
+        <div class="flex flex-col justify-between h-full">
+          <div>
+            <h3 class="text-dark text-xl sm:text-2xl font-bold mb-3">
+              Affordable Price
+            </h3>
+            <p class="text-gray text-sm sm:text-base leading-relaxed">
+              You can get a workspace of the highest quality at an affordable price and still enjoy the facilities that are only here.
+            </p>
+          </div>
+          <a href="#"
+            class="inline-flex items-center gap-2 text-primary text-sm font-medium mt-4 group hover:gap-3 transition-all">
+            <span>More Info</span>
+            <img src="/images/Vector.png" alt="" class="w-4 h-auto group-hover:translate-x-1 transition-transform" />
+          </a>
+        </div>
+
+        <!-- 4. Many Choices -->
+        <div class="flex flex-col justify-between h-full">
+          <div>
+            <h3 class="text-dark text-xl sm:text-2xl font-bold mb-3">
+              Many Choices
+            </h3>
+            <p class="text-gray text-sm sm:text-base leading-relaxed">
+              We provide many of the best choices for you in other words you can easily find the furniture you need here.
+            </p>
+          </div>
+          <a href="#"
+            class="inline-flex items-center gap-2 text-primary text-sm font-medium mt-4 group hover:gap-3 transition-all">
+            <span>More Info</span>
+            <img src="/images/Vector.png" alt="" class="w-4 h-auto group-hover:translate-x-1 transition-transform" />
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================================ -->
+  <!-- SECTION 3 : BEST SELLING PRODUCT                                 -->
+  <!-- ================================================================ -->
+
+  <section class="py-16 sm:py-20 lg:py-24 bg-gray-light">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+      <h2 class="text-dark text-3xl sm:text-4xl font-bold">
+        Best Selling Product
+      </h2>
+
+      <!-- Onglets filtres -->
+      <div class="mt-6 sm:mt-8 inline-flex items-center bg-gray-border p-1.5 rounded-full">
+        <button type="button"
+          class="bg-white text-dark font-medium text-sm sm:text-base px-6 py-2 rounded-full shadow-sm cursor-pointer">
+          Chair
+        </button>
+        <button type="button"
+          class="text-gray hover:text-dark font-medium text-sm sm:text-base px-6 py-2 rounded-full transition-colors cursor-pointer">
+          Beds
+        </button>
+        <button type="button"
+          class="text-gray hover:text-dark font-medium text-sm sm:text-base px-6 py-2 rounded-full transition-colors cursor-pointer">
+          Sofa
+        </button>
+        <button type="button"
+          class="text-gray hover:text-dark font-medium text-sm sm:text-base px-6 py-2 rounded-full transition-colors cursor-pointer">
+          Lamp
+        </button>
+      </div>
+
+      <!-- Grille de 4 cartes avec flèches latérales -->
+      <div class="relative mt-12 sm:mt-16">
+
+        <button type="button" aria-label="Previous"
+          class="hidden xl:flex absolute -left-6 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-white shadow-lg items-center justify-center text-dark hover:bg-primary hover:text-white transition-all cursor-pointer">
+          <span class="text-xl font-bold leading-none select-none">&#8249;</span>
+        </button>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+
+          <!-- CARTE 1 -->
+          <div class="bg-white rounded-[20px] overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.04)] flex flex-col justify-between">
+            <div class="bg-gray-bg pt-8 pb-4 px-4 flex items-center justify-center min-h-[220px]">
+              <img src="/images/sakarias-armchair-black-sporda-dark-gray__0729767_pe737131_s5_adobespark (1).png"
+                alt="Sakarias Armchair" class="h-44 object-contain hover:scale-105 transition-transform duration-300" />
+            </div>
+            <div class="p-6 bg-white flex flex-col flex-grow justify-between">
+              <div>
+                <span class="text-gray text-xs sm:text-sm">Chair</span>
+                <h3 class="text-dark font-bold text-lg sm:text-xl mt-1">Sakarias Armchair</h3>
+                <div class="flex items-center gap-1 mt-2">
+                  <img src="/images/Star.png" alt="star" class="w-4 h-4 object-contain" />
+                  <img src="/images/Star.png" alt="star" class="w-4 h-4 object-contain" />
+                  <img src="/images/Star.png" alt="star" class="w-4 h-4 object-contain" />
+                  <img src="/images/Star.png" alt="star" class="w-4 h-4 object-contain" />
+                  <img src="/images/Star.png" alt="star" class="w-4 h-4 object-contain" />
+                </div>
+              </div>
+              <div class="flex items-center justify-between mt-6">
+                <div class="flex items-start">
+                  <span class="text-xs font-bold text-dark mr-0.5 mt-0.5">$</span>
+                  <span class="text-xl font-bold text-dark">392</span>
+                </div>
+                <button type="button" aria-label="Ajouter au panier" class="hover:opacity-90 transition-opacity cursor-pointer">
+                  <img src="/images/Frame 174.png" alt="Ajouter" class="w-10 h-10" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARTE 2 -->
+          <div class="bg-white rounded-[20px] overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.04)] flex flex-col justify-between">
+            <div class="bg-gray-bg pt-8 pb-4 px-4 flex items-center justify-center min-h-[220px]">
+              <img src="/images/sakarias-armchair-black-sporda-dark-gray__0729767_pe737131_s5_adobespark.png"
+                alt="Baltsar Chair" class="h-44 object-contain hover:scale-105 transition-transform duration-300" />
+            </div>
+            <div class="p-6 bg-white flex flex-col flex-grow justify-between">
+              <div>
+                <span class="text-gray text-xs sm:text-sm">Chair</span>
+                <h3 class="text-dark font-bold text-lg sm:text-xl mt-1">Baltsar Chair</h3>
+                <div class="flex items-center gap-1 mt-2">
+                  <img src="/images/Star.png" alt="star" class="w-4 h-4 object-contain" />
+                  <img src="/images/Star.png" alt="star" class="w-4 h-4 object-contain" />
+                  <img src="/images/Star.png" alt="star" class="w-4 h-4 object-contain" />
+                  <img src="/images/Star.png" alt="star" class="w-4 h-4 object-contain" />
+                  <img src="/images/Star.png" alt="star" class="w-4 h-4 object-contain" />
+                </div>
+              </div>
+              <div class="flex items-center justify-between mt-6">
+                <div class="flex items-start">
+                  <span class="text-xs font-bold text-dark mr-0.5 mt-0.5">$</span>
+                  <span class="text-xl font-bold text-dark">299</span>
+                </div>
+                <button type="button" aria-label="Ajouter au panier" class="hover:opacity-90 transition-opacity cursor-pointer">
+                  <img src="/images/Frame 174.png" alt="Ajouter" class="w-10 h-10" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARTE 3 -->
+          <div class="bg-white rounded-[20px] overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.04)] flex flex-col justify-between">
+            <div class="bg-gray-bg pt-8 pb-4 px-4 flex items-center justify-center min-h-[220px]">
+              <img src="/images/sakarias-armchair-black-sporda-dark-gray__0729767_pe737131_s5_adobespark (3).png"
+                alt="Anjay Chair" class="h-44 object-contain hover:scale-105 transition-transform duration-300" />
+            </div>
+            <div class="p-6 bg-white flex flex-col flex-grow justify-between">
+              <div>
+                <span class="text-gray text-xs sm:text-sm">Chair</span>
+                <h3 class="text-dark font-bold text-lg sm:text-xl mt-1">Anjay Chair</h3>
+                <div class="flex items-center gap-1 mt-2">
+                  <img src="/images/Star.png" alt="star" class="w-4 h-4 object-contain" />
+                  <img src="/images/Star.png" alt="star" class="w-4 h-4 object-contain" />
+                  <img src="/images/Star.png" alt="star" class="w-4 h-4 object-contain" />
+                  <img src="/images/Star.png" alt="star" class="w-4 h-4 object-contain" />
+                  <img src="/images/Star.png" alt="star" class="w-4 h-4 object-contain" />
+                </div>
+              </div>
+              <div class="flex items-center justify-between mt-6">
+                <div class="flex items-start">
+                  <span class="text-xs font-bold text-dark mr-0.5 mt-0.5">$</span>
+                  <span class="text-xl font-bold text-dark">519</span>
+                </div>
+                <button type="button" aria-label="Ajouter au panier" class="hover:opacity-90 transition-opacity cursor-pointer">
+                  <img src="/images/Frame 174.png" alt="Ajouter" class="w-10 h-10" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARTE 4 -->
+          <div class="bg-white rounded-[20px] overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.04)] flex flex-col justify-between">
+            <div class="bg-gray-bg pt-8 pb-4 px-4 flex items-center justify-center min-h-[220px]">
+              <img src="/images/sakarias-armchair-black-sporda-dark-gray__0729767_pe737131_s5_adobespark (4).png"
+                alt="Nykolai Chair" class="h-44 object-contain hover:scale-105 transition-transform duration-300" />
+            </div>
+            <div class="p-6 bg-white flex flex-col flex-grow justify-between">
+              <div>
+                <span class="text-gray text-xs sm:text-sm">Chair</span>
+                <h3 class="text-dark font-bold text-lg sm:text-xl mt-1">Nykolai Chair</h3>
+                <div class="flex items-center gap-1 mt-2">
+                  <img src="/images/Star.png" alt="star" class="w-4 h-4 object-contain" />
+                  <img src="/images/Star.png" alt="star" class="w-4 h-4 object-contain" />
+                  <img src="/images/Star.png" alt="star" class="w-4 h-4 object-contain" />
+                  <img src="/images/Star.png" alt="star" class="w-4 h-4 object-contain" />
+                  <img src="/images/Star.png" alt="star" class="w-4 h-4 object-contain" />
+                </div>
+              </div>
+              <div class="flex items-center justify-between mt-6">
+                <div class="flex items-start">
+                  <span class="text-xs font-bold text-dark mr-0.5 mt-0.5">$</span>
+                  <span class="text-xl font-bold text-dark">419</span>
+                </div>
+                <button type="button" aria-label="Ajouter au panier" class="hover:opacity-90 transition-opacity cursor-pointer">
+                  <img src="/images/Frame 174.png" alt="Ajouter" class="w-10 h-10" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <button type="button" aria-label="Next"
+          class="hidden xl:flex absolute -right-6 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-white shadow-lg items-center justify-center text-dark hover:bg-primary hover:text-white transition-all cursor-pointer">
+          <span class="text-xl font-bold leading-none select-none">&#8250;</span>
+        </button>
+
+      </div>
+
+      <!-- Lien View All -->
+      <div class="mt-12 sm:mt-16">
+        <a href="#" class="inline-flex items-center gap-2 text-primary font-medium text-base group hover:gap-3 transition-all">
+          <span>View All</span>
+          <img src="/images/Vector.png" alt="" class="w-4 h-auto group-hover:translate-x-1 transition-transform" />
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================================ -->
+  <!-- SECTION 4 : EXPERIENCES (Image collée à gauche comme sur Figma) -->
+  <!-- ================================================================ -->
+
+  <section class="py-16 sm:py-24 lg:py-32 bg-white overflow-hidden">
+    <div class="w-full max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+
+      <!-- Colonne GAUCHE : Image collée au bord gauche avec fond décoratif -->
+      <div class="lg:col-span-6 xl:col-span-6 relative order-2 lg:order-1 pr-4 sm:pr-6 lg:pr-0">
+        
+        <!-- Cartes décoratives d'arrière-plan en gris doux (comme sur la capture) -->
+        <div class="absolute -top-6 -left-10 w-[70%] h-[75%] bg-gray-light rounded-[28px] -z-10 hidden sm:block"></div>
+        <div class="absolute -bottom-6 right-0 w-[45%] h-[55%] bg-gray-light/60 rounded-[28px] -z-10 hidden sm:block"></div>
+        
+        <!-- Conteneur image collé au bord gauche, arrondi uniquement à droite -->
+        <div class="rounded-r-[24px] sm:rounded-r-[32px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
+          <img
+            src="/images/Rectangle 1446.png"
+            alt="We Provide You The Best Experience"
+            class="w-full h-auto object-cover max-h-[460px] sm:max-h-[520px]"
+          />
+        </div>
+
+      </div>
+
+      <!-- Colonne DROITE : Texte avec marge et gap confortable -->
+      <div class="lg:col-span-6 xl:col-span-5 px-6 sm:px-10 lg:pl-6 lg:pr-12 text-left order-1 lg:order-2">
+        
+        <span class="text-primary uppercase tracking-[0.2em] text-xs sm:text-sm font-bold">
+          EXPERIENCES
+        </span>
+
+        <h2 class="text-dark text-3xl sm:text-4xl lg:text-[42px] font-bold leading-tight mt-3">
+          We Provide You The <br class="hidden sm:inline" />
+          Best Experience
+        </h2>
+
+        <p class="text-gray text-sm sm:text-base leading-relaxed mt-4 sm:mt-6">
+          You don't have to worry about the result because all of these interiors are made by people who are
+          professionals in their fields with an elegant and luxurious style and with premium quality materials.
+        </p>
+
+        <div class="mt-6 sm:mt-8">
+          <a href="#" class="inline-flex items-center gap-2 text-primary font-semibold text-sm sm:text-base group hover:gap-3 transition-all">
+            <span>More Info</span>
+            <img src="/images/Vector.png" alt="" class="w-4 h-auto group-hover:translate-x-1 transition-transform" />
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================================ -->
+  <!-- SECTION 5 : MATERIALS (Mosaïque avec image collée à droite)      -->
+  <!-- ================================================================ -->
+
+  <section class="py-16 sm:py-24 lg:py-32 bg-white overflow-hidden">
+    <div class="w-full max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+
+      <!-- Colonne GAUCHE : Texte avec marge propre -->
+      <div class="lg:col-span-5 px-6 sm:px-10 lg:pl-16 text-left order-2 lg:order-1">
+        <span class="text-primary uppercase tracking-[0.2em] text-xs sm:text-sm font-bold">
+          MATERIALS
+        </span>
+
+        <h2 class="text-dark text-3xl sm:text-4xl lg:text-[42px] font-bold leading-tight mt-3">
+          Very Serious <br class="hidden sm:inline" />
+          Materials For Making <br class="hidden sm:inline" />
+          Furniture
+        </h2>
+
+        <p class="text-gray text-sm sm:text-base leading-relaxed mt-4 sm:mt-6">
+          Because panto was very serious about designing furniture for our environment, using a very expensive and famous capital but at a relatively low price
+        </p>
+
+        <div class="mt-6 sm:mt-8">
+          <a href="#" class="inline-flex items-center gap-2 text-primary font-semibold text-sm sm:text-base group hover:gap-3 transition-all">
+            <span>More Info</span>
+            <img src="/images/Vector.png" alt="" class="w-4 h-auto group-hover:translate-x-1 transition-transform" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Colonne DROITE : Mosaïque d'images (2 à gauche + 1 grande collée à droite) -->
+      <div class="lg:col-span-7 relative order-1 lg:order-2 pl-4 sm:pl-6 lg:pl-0">
+        
+        <!-- Carte décorative d'arrière-plan gris clair en haut à droite -->
+        <div class="absolute -top-8 right-0 w-[55%] h-[60%] bg-gray-light rounded-[28px] -z-10 hidden sm:block"></div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-12 gap-4 sm:gap-6 items-center">
+          
+          <!-- 2 petites images empilées à gauche -->
+          <div class="sm:col-span-5 flex flex-col gap-4 sm:gap-6">
+            <div class="rounded-[20px] overflow-hidden shadow-[0_15px_35px_rgba(0,0,0,0.06)]">
+              <img
+                src="/images/Rectangle 1450.png"
+                alt="Material salon"
+                class="w-full h-44 sm:h-52 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="rounded-[20px] overflow-hidden shadow-[0_15px_35px_rgba(0,0,0,0.06)]">
+              <img
+                src="/images/Rectangle 1450 (1).png"
+                alt="Material canapé"
+                class="w-full h-52 sm:h-64 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </div>
+
+          <!-- 1 grande image collée à droite -->
+          <div class="sm:col-span-7">
+            <div class="rounded-l-[24px] sm:rounded-l-[32px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
+              <img
+                src="/images/Rectangle 1446 (1).png"
+                alt="Material salle à manger"
+                class="w-full h-72 sm:h-[480px] object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================================ -->
+  <!-- SECTION 6 : TESTIMONIALS                                         -->
+  <!-- ================================================================ -->
+
+  <section class="py-16 sm:py-20 lg:py-28 bg-gray-light">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+      <span class="text-primary uppercase tracking-[0.2em] text-xs sm:text-sm font-bold">
+        TESTIMONIALS
+      </span>
+
+      <h2 class="text-dark text-3xl sm:text-4xl font-bold mt-3">
+        Our Client Reviews
+      </h2>
+
+      <div class="relative mt-12 sm:mt-16">
+
+        <button type="button" aria-label="Previous"
+          class="hidden xl:flex absolute -left-6 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-white shadow-lg items-center justify-center text-dark hover:bg-primary hover:text-white transition-all cursor-pointer">
+          <span class="text-xl font-bold leading-none select-none">&#8249;</span>
+        </button>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 text-center">
+
+          <!-- TESTIMONIAL 1 -->
+          <div class="relative rounded-[22px] overflow-hidden bg-cover bg-center min-h-[440px] sm:min-h-[460px] shadow-lg flex flex-col justify-end p-4 sm:p-5"
+            style="background-image: url('/images/unsplash__HqHX3LBN18.png');">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="relative z-10 bg-white rounded-[18px] p-5 sm:p-6 shadow-xl">
+              <div class="absolute -top-7 left-1/2 -translate-x-1/2 w-14 h-14 rounded-full border-4 border-white overflow-hidden shadow-md bg-white">
+                <img src="/images/Ellipse 1131.png" alt="Bang Upin" class="w-full h-full object-cover" />
+              </div>
+              <div class="pt-6">
+                <h3 class="text-dark font-bold text-base sm:text-lg">Bang Upin</h3>
+                <p class="text-gray text-xs mt-0.5">Pedagang Asongan</p>
+                <p class="text-dark text-xs sm:text-[13px] leading-relaxed mt-3 sm:mt-4">
+                  “Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat sangat nyaman saat dihuni.”
+                </p>
+                <div class="flex items-center justify-center gap-1 mt-3 sm:mt-4">
+                  <img src="/images/Star.png" alt="star" class="w-3.5 h-3.5 object-contain" />
+                  <img src="/images/Star.png" alt="star" class="w-3.5 h-3.5 object-contain" />
+                  <img src="/images/Star.png" alt="star" class="w-3.5 h-3.5 object-contain" />
+                  <img src="/images/Star.png" alt="star" class="w-3.5 h-3.5 object-contain" />
+                  <img src="/images/Star.png" alt="star" class="w-3.5 h-3.5 object-contain" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TESTIMONIAL 2 -->
+          <div class="relative rounded-[22px] overflow-hidden bg-cover bg-center min-h-[440px] sm:min-h-[460px] shadow-lg flex flex-col justify-end p-4 sm:p-5"
+            style="background-image: url('/images/unsplash_JaXs8Tk5Iww.png');">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="relative z-10 bg-white rounded-[18px] p-5 sm:p-6 shadow-xl">
+              <div class="absolute -top-7 left-1/2 -translate-x-1/2 w-14 h-14 rounded-full border-4 border-white overflow-hidden shadow-md bg-white">
+                <img src="/images/Ellipse 1131 (1).png" alt="Ibuk Sukijan" class="w-full h-full object-cover" />
+              </div>
+              <div class="pt-6">
+                <h3 class="text-dark font-bold text-base sm:text-lg">Ibuk Sukijan</h3>
+                <p class="text-gray text-xs mt-0.5">Ibu Rumah Tangga</p>
+                <p class="text-dark text-xs sm:text-[13px] leading-relaxed mt-3 sm:mt-4">
+                  “Makasih Panto, aku sekarang ngerasa nyaman banget di rumah berkat perabotan yang estetik.”
+                </p>
+                <div class="flex items-center justify-center gap-1 mt-3 sm:mt-4">
+                  <img src="/images/Star.png" alt="star" class="w-3.5 h-3.5 object-contain" />
+                  <img src="/images/Star.png" alt="star" class="w-3.5 h-3.5 object-contain" />
+                  <img src="/images/Star.png" alt="star" class="w-3.5 h-3.5 object-contain" />
+                  <img src="/images/Star.png" alt="star" class="w-3.5 h-3.5 object-contain" />
+                  <img src="/images/Star.png" alt="star" class="w-3.5 h-3.5 object-contain" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TESTIMONIAL 3 -->
+          <div class="relative rounded-[22px] overflow-hidden bg-cover bg-center min-h-[440px] sm:min-h-[460px] shadow-lg flex flex-col justify-end p-4 sm:p-5 md:col-span-2 md:max-w-md md:mx-auto lg:col-span-1 lg:max-w-none lg:mx-0"
+            style="background-image: url('/images/unsplash_h2_3dL9yLpU.png');">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="relative z-10 bg-white rounded-[18px] p-5 sm:p-6 shadow-xl">
+              <div class="absolute -top-7 left-1/2 -translate-x-1/2 w-14 h-14 rounded-full border-4 border-white overflow-hidden shadow-md bg-white">
+                <img src="/images/Ellipse 1131 (2).png" alt="Mpok Ina" class="w-full h-full object-cover" />
+              </div>
+              <div class="pt-6">
+                <h3 class="text-dark font-bold text-base sm:text-lg">Mpok Ina</h3>
+                <p class="text-gray text-xs mt-0.5">Karyawan Swasta</p>
+                <p class="text-dark text-xs sm:text-[13px] leading-relaxed mt-3 sm:mt-4">
+                  “Sangat terjangkau dan kualitasnya bintang lima. Pasti bakal order lagi buat kamar tidur!”
+                </p>
+                <div class="flex items-center justify-center gap-1 mt-3 sm:mt-4">
+                  <img src="/images/Star.png" alt="star" class="w-3.5 h-3.5 object-contain" />
+                  <img src="/images/Star.png" alt="star" class="w-3.5 h-3.5 object-contain" />
+                  <img src="/images/Star.png" alt="star" class="w-3.5 h-3.5 object-contain" />
+                  <img src="/images/Star.png" alt="star" class="w-3.5 h-3.5 object-contain" />
+                  <img src="/images/Star.png" alt="star" class="w-3.5 h-3.5 object-contain" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <button type="button" aria-label="Next"
+          class="hidden xl:flex absolute -right-6 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-white shadow-lg items-center justify-center text-dark hover:bg-primary hover:text-white transition-all cursor-pointer">
+          <span class="text-xl font-bold leading-none select-none">&#8250;</span>
+        </button>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================================ -->
+  <!-- SECTION 7 : FOOTER                                               -->
+  <!-- ================================================================ -->
+
+  <footer class="bg-gray-light pt-16 sm:pt-20 lg:pt-24 pb-10 sm:pb-14 border-t border-gray-border">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 pb-12 sm:pb-16">
+
+        <!-- COLONNE 1 -->
+        <div class="sm:col-span-2 lg:col-span-4 pr-0 lg:pr-6 text-left">
+          <a href="#" class="text-dark text-2xl sm:text-3xl font-bold tracking-wide hover:text-primary transition-colors">
+            Panto
+          </a>
+          <p class="text-gray text-sm sm:text-base leading-relaxed mt-4 sm:mt-5 max-w-sm">
+            The advantage of hiring a workspace with us is that gives you comfortable service and all-around facilities.
+          </p>
+        </div>
+
+        <!-- COLONNE 2 -->
+        <div class="sm:col-span-1 lg:col-span-2 lg:col-start-6 text-left">
+          <h4 class="text-primary text-base sm:text-lg font-semibold mb-4 sm:mb-5">Services</h4>
+          <ul class="space-y-2.5 sm:space-y-3.5">
+            <li><a href="#" class="text-dark text-sm sm:text-base hover:text-primary transition-colors">Email Marketing</a></li>
+            <li><a href="#" class="text-dark text-sm sm:text-base hover:text-primary transition-colors">Campaigns</a></li>
+            <li><a href="#" class="text-dark text-sm sm:text-base hover:text-primary transition-colors">Branding</a></li>
+            <li><a href="#" class="text-dark text-sm sm:text-base hover:text-primary transition-colors">Offline</a></li>
+          </ul>
+        </div>
+
+        <!-- COLONNE 3 -->
+        <div class="sm:col-span-1 lg:col-span-2 text-left">
+          <h4 class="text-primary text-base sm:text-lg font-semibold mb-4 sm:mb-5">Furniture</h4>
+          <ul class="space-y-2.5 sm:space-y-3.5">
+            <li><a href="#" class="text-dark text-sm sm:text-base hover:text-primary transition-colors">Beds</a></li>
+            <li><a href="#" class="text-dark text-sm sm:text-base hover:text-primary transition-colors">Chair</a></li>
+            <li><a href="#" class="text-dark text-sm sm:text-base hover:text-primary transition-colors">All</a></li>
+          </ul>
+        </div>
+
+        <!-- COLONNE 4 -->
+        <div class="sm:col-span-2 lg:col-span-2 text-left">
+          <h4 class="text-primary text-base sm:text-lg font-semibold mb-4 sm:mb-5">Follow Us</h4>
+          <ul class="flex sm:flex-col gap-4 sm:gap-3.5">
+            <li>
+              <a href="#" class="inline-flex items-center gap-2.5 text-dark text-sm sm:text-base hover:text-primary transition-colors">
+                <img src="/images/001-facebook.png" alt="Facebook" class="w-4 h-4 object-contain" />
+                <span>Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="inline-flex items-center gap-2.5 text-dark text-sm sm:text-base hover:text-primary transition-colors">
+                <img src="/images/Path.png" alt="Twitter" class="w-4 h-4 object-contain" />
+                <span>Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="inline-flex items-center gap-2.5 text-dark text-sm sm:text-base hover:text-primary transition-colors">
+                <img src="/images/004-instagram.png" alt="Instagram" class="w-4 h-4 object-contain" />
+                <span>Instagram</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- LIGNE BASSE -->
+      <div class="pt-6 sm:pt-8 border-t border-gray-border flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-gray text-xs sm:text-sm">
+        <p>Copyright &copy; 2021 Panto. All rights reserved.</p>
+        <div class="flex items-center gap-6 sm:gap-8">
+          <a href="#" class="text-dark hover:text-primary transition-colors">Terms &amp; Conditions</a>
+          <a href="#" class="text-dark hover:text-primary transition-colors">Privacy Policy</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ============================================================== -->
+  <!-- JAVASCRIPT                                                     -->
+  <!-- ============================================================== -->
+  <script>
+    const boutonHamburger = document.getElementById('btn-hamburger');
+    const menuMobile = document.getElementById('menu-mobile');
+
+    boutonHamburger.addEventListener('click', function () {
+      menuMobile.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+
+</html>

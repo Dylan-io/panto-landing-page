@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+/* ============================================================
+   VARIABLES / DESIGN TOKENS (Tailwind CSS v4)
+   Dans Tailwind v4, toutes les variables personnalisées
+   doivent être placées à l'intérieur du bloc @theme { ... }
+   ============================================================ */
+
+@theme {
+  /* ------ COULEURS PRINCIPALES ------ */
+  --color-dark: #1E1E1E;
+  --color-white: #FFFFFF;
+  --color-primary: #E58411;
+  --color-primary-light: #F6B76F;
+  --color-primary-medium: #F6973F;
+  --color-navy: #0D1B39;
+  --color-navy-dark: #1E2833;
+
+  /* ------ COULEURS GRISES ------ */
+  --color-gray: #8D8D8D;
+  --color-gray-medium: #7C7C7C;
+  --color-gray-light: #F7F7F7;
+  --color-gray-bg: #FAFAFA;
+  --color-gray-border: #EEEEEE;
+
+  /* ------ COULEUR ACCENT ------ */
+  --color-teal: #00D6C9;
+
+  /* ------ POLICE DE CARACTÈRES ------ */
+  --font-body: "Poppins", sans-serif;
+
+  /* ------ ARRONDIS & OMBRES ------ */
+  --radius-card: 20px;
+  --radius-badge: 50px;
+  --shadow-card: 0 20px 40px rgba(0, 0, 0, 0.08);
+  --shadow-dropdown: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* ============================================================
+   STYLES DE BASE
+   ============================================================ */
+body {
+  font-family: var(--font-body);
+  color: var(--color-dark);
+  background-color: var(--color-white);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
