@@ -12,7 +12,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet" />
 
-  <!-- Tailwind CSS + nos variables (via src/main.js qui importe src/style.css) -->
+  <link rel="stylesheet" href="/src/style.css" />
+
+  <!-- Tailwind CSS + nos variables -->
   <script type="module" src="/src/main.js"></script>
 </head>
 
@@ -23,14 +25,14 @@
   <!-- ================================================================ -->
 
   <div
-    class="relative w-full min-h-[750px] sm:min-h-[850px] md:min-h-[920px] lg:min-h-[1020px] bg-cover bg-center bg-no-repeat overflow-hidden"
+    class="relative w-full min-h-187.5 sm:min-h-212.5 md:min-h-230 lg:min-h-255 bg-cover bg-center bg-no-repeat overflow-hidden"
     style="background-image: url('/images/Rectangle 1441.png');"
   >
     <!-- Overlay sombre doux pour lisibilité -->
     <div class="absolute inset-0 bg-black/40"></div>
 
     <!-- Dégradé blanc en bas pour transitionner proprement vers la section suivante -->
-    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white via-white/60 to-transparent z-10 pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-white via-white/60 to-transparent z-10 pointer-events-none"></div>
 
 
     <!-- ============================================================== -->
@@ -82,10 +84,18 @@
             </a>
 
             <!-- Bouton Hamburger mobile -->
-            <button id="btn-hamburger" type="button" class="md:hidden flex flex-col gap-1.5 cursor-pointer" aria-label="Menu">
-              <span class="block w-6 h-0.5 bg-white rounded-full"></span>
-              <span class="block w-6 h-0.5 bg-white rounded-full"></span>
-              <span class="block w-6 h-0.5 bg-white rounded-full"></span>
+            <button
+              id="btn-hamburger"
+              type="button"
+              class="menu-button md:hidden flex flex-col gap-1.5 cursor-pointer"
+              aria-label="Ouvrir le menu"
+              aria-controls="menu-mobile"
+              aria-expanded="false"
+            >
+              <span class="menu-line block w-6 h-0.5 bg-white rounded-full"></span>
+              <span class="menu-line block w-6 h-0.5 bg-white rounded-full"></span>
+              <span class="menu-line block w-6 h-0.5 bg-white rounded-full"></span>
+              <span class="menu-close" aria-hidden="true">&times;</span>
             </button>
 
           </div>
@@ -93,7 +103,7 @@
         </div>
 
         <!-- MENU MOBILE -->
-        <nav id="menu-mobile" class="hidden mt-4 pt-4 pb-2 border-t border-white/20 flex flex-col gap-3">
+        <nav id="menu-mobile" class="mobile-menu" hidden>
           <a href="#" class="text-white text-base hover:text-primary transition-colors">Furniture</a>
           <a href="#" class="text-white text-base hover:text-primary transition-colors">Shop</a>
           <a href="#" class="text-white text-base hover:text-primary transition-colors">About Us</a>
@@ -774,19 +784,6 @@
 
     </div>
   </footer>
-
-
-  <!-- ============================================================== -->
-  <!-- JAVASCRIPT                                                     -->
-  <!-- ============================================================== -->
-  <script>
-    const boutonHamburger = document.getElementById('btn-hamburger');
-    const menuMobile = document.getElementById('menu-mobile');
-
-    boutonHamburger.addEventListener('click', function () {
-      menuMobile.classList.toggle('hidden');
-    });
-  </script>
 
 </body>
 

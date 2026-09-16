@@ -47,3 +47,69 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
+
+/* Le bouton garde ses trois barres et affiche un petit x par-dessus a l'ouverture. */
+.menu-button {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  transition: opacity 180ms ease;
+}
+
+.menu-button:hover {
+  opacity: 0.8;
+}
+
+.menu-line {
+  transition: opacity 180ms ease;
+}
+
+.menu-close {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-size: 19px;
+  line-height: 1;
+  font-weight: 300;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+
+.menu-button.is-open .menu-close {
+  opacity: 1;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem 1.25rem;
+  background: rgba(13, 27, 57, 0.98);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.22);
+}
+
+.mobile-menu[hidden] {
+  display: none;
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 0.45rem 0;
+}
+
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}
