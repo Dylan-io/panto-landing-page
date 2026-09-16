@@ -48,9 +48,8 @@ body {
   overflow-x: hidden;
 }
 
-/* Le bouton garde ses trois barres et affiche un petit x par-dessus a l'ouverture. */
+/* Le bouton transforme ses trois barres en croix a l'ouverture. */
 .menu-button {
-  position: relative;
   width: 24px;
   height: 24px;
   justify-content: center;
@@ -62,26 +61,19 @@ body {
 }
 
 .menu-line {
-  transition: opacity 180ms ease;
+  transition: transform 180ms ease, opacity 180ms ease;
 }
 
-.menu-close {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-white);
-  font-size: 19px;
-  line-height: 1;
-  font-weight: 300;
+.menu-button.is-open .menu-line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-button.is-open .menu-line:nth-child(2) {
   opacity: 0;
-  pointer-events: none;
-  transition: opacity 180ms ease;
 }
 
-.menu-button.is-open .menu-close {
-  opacity: 1;
+.menu-button.is-open .menu-line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 .mobile-menu {
