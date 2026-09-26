@@ -13,6 +13,7 @@ function toggleMenu(forceState) {
 
 
 
+
     
     mobileMenu.hidden = !isMenuOpen;
     menuButton.classList.toggle('is-open', isMenuOpen);
