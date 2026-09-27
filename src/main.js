@@ -7,6 +7,8 @@ function toggleMenu(forceState) {
     if (!menuButton || !mobileMenu) return;
 
     const isMenuOpen = forceState ?? mobileMenu.hidden;
+
+    
     mobileMenu.hidden = !isMenuOpen;
     menuButton.classList.toggle('is-open', isMenuOpen);
     menuButton.setAttribute('aria-expanded', String(isMenuOpen));
