@@ -12,6 +12,7 @@ function toggleMenu(forceState) {
 
 
 
+
     
     const isMenuOpen = forceState ?? mobileMenu.hidden;
     mobileMenu.hidden = !isMenuOpen;
