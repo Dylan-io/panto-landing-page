@@ -6,6 +6,7 @@ const mobileMenuLinks = mobileMenu?.querySelectorAll('a');
 function toggleMenu(forceState) {
     if (!menuButton || !mobileMenu) return;
 
+
     
     const isMenuOpen = forceState ?? mobileMenu.hidden;
     mobileMenu.hidden = !isMenuOpen;
