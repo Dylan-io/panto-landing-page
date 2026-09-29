@@ -16,7 +16,6 @@ function toggleMenu(forceState) {
 
 
 
-
 menuButton?.addEventListener('click', () => toggleMenu());
 
 // Referme le menu apres une navigation ou avec la touche Echap.
