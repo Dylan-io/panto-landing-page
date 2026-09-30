@@ -12,6 +12,7 @@ function toggleMenu(forceState) {
     menuButton.setAttribute('aria-label', isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu');
 }
 
+
 menuButton?.addEventListener('click', () => toggleMenu());
 
 // Referme le menu apres une navigation ou avec la touche Echap.
