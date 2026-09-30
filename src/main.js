@@ -19,6 +19,7 @@ mobileMenuLinks?.forEach((link) => {
     link.addEventListener('click', () => toggleMenu(false));
 });
 
+
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') toggleMenu(false);
 });
