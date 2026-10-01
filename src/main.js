@@ -20,7 +20,6 @@ mobileMenuLinks?.forEach((link) => {
 });
 
 
-
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') toggleMenu(false);
 });
